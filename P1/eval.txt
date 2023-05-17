@@ -1,0 +1,61 @@
+Prac 1 sorting algorithm perfomance evaluation
+
+/using range(10) array set random/
+/rounded to 6 dp/
+
+Test 1: size 10 random
+Test 2: size 20 nearly sorted
+Test 3: size 40 descending
+Test 4: size 700 random
+
+BubbleSort: O(n**)
+Test 1:
+0.002012ms
+Test 2:
+0.002302ms
+Test 3:
+0.005751ms
+Test 4:
+0.530438ms
+
+InsertionSort: O(n**)
+Test 1:
+0.002037ms
+Test 2:
+0.002318ms
+Test 3:
+0.004528
+Test 4:
+0.347001ms
+
+SelectionSort: O(n**)
+Test 1: 
+0.002040ms
+Test 2:
+0.002330ms
+Test 3:
+0.004038ms
+Test 4:
+0.386960ms
+
+--
+Bubble sort and Insertion sort proved to be a lot faster in sorting arrays of smaller size, but start to take longer as the size of the array increases
+Selection sort would be a better algorithm to sort larger arrays than Bubble sort and Insertion sort.
+Insertion sort also would be a better algorithm to sort larger arrays along with Selection sort.
+
+During the testing of all three sorting algorithms, with small arrays, from 10-100, bubble sort would prove to be a faster sorting algorithm due to its O(n) time complexity.
+However, once the array starts to increase in size, Bubble sort would start to underperform in comparison to other sorting algorithms such as Insertion sort and Selection sort.
+The other two algorithms proved to be more efficient in sorting the array a lot faster than Bubble sort due to the O(n^2) time complexity.
+--
+
+updated evaluation
+
+The faster algorithm that sorted a small array was bubbleSort due to the best case being O(N) and average case of O(N^2) even if the array was in reverse as the time complexity between average case and wort case does not change.
+However, as the array was significantly larger (700) bubbleSort took the longest time. Showing that InsertionSort was the better algorithm for sorting the larger array due to its time complexity of O(N) / O(N^2), despite it being the same time complexity as bubbleSort, the amount of passes it makes is a lot less than bubbleSort, making it marginally faster.
+The worst perfoming algorithm was selectionSort as it produced the slowest time except for test 3, as it is the fastest out of the two as all best, average and worst case scenario time complexity is O(N^2)
+In conclusion, smaller arrays would benefit using bubbleSort, larger arrays with InsertionSort and descending arrays with selectionSort.
+
+
+optimised bubblesort o(n)
+worst case o(n^2)
+
