@@ -63,5 +63,21 @@ worst case o(n^2)
 
 P9 evaluation
 
-Quicksort shouldbe the fasters for smaller arrays. However, as the data array increases, the algorithm slowly becomes inefficient whilst mergesort remains consistant
-mergesort is (O(N log N)), worst (O(N ^ 2)), average (O(N log N))
+| n  |   1500   |  1000   |   500   |   100   | array size
+| qa |  75.67   |  60.67  |  72.0   |  37.33  | quicksort
+| 3a |  60.33   |  86.00  |  82.00  |  42.00  | quicksort 3 pivot
+| ra |  209.67  |  187.00 | 255.33  |  197.0  | quicsort random
+| ma |  105.00  |  90.33  | 105.67  |  55.00  | mergesort
+
+Quick sorting should be the fastest for the smaller data sets. However, as the data size increases, 
+the quick sort will reduce in efficiency and the merge sort will remain consistent with its efficiency.
+Merge is always O(N log N) and quick can be optimal (O(N log N)), worst case (O(N^2)) or average (O(N log N)).  
+Overall, merge is the preferred sorting method.
+
+Left most pivot selection quick sort is the fastest when n is 100. Quick sort with pivot median of 3 is 
+slower than quick sort with left most pivot when n is 1000, 500 and 100. This could be due to how I 
+implemented my algorithm for finding the median. Each quick sorting algorithm are faster with smaller 
+data sets. However, when the number of elements in the data sets increases, each quick sort reduces in 
+efficiency. In contrast, merge sort remains consistent with its efficiency. Thus, quick sorts is (O(N^2)) 
+worst case, (O(N log N)) average case, and most optimal with (O(N log N)). While merge sort is always 
+O(N log N).
