@@ -85,22 +85,16 @@ def merge(A, leftIdx, midIdx, rightIdx):
     return A
 
 def quickSort(A): 
-    """ quickSort - front-end for kick-starting the recursive algorithm
-    """
     quickSortRecurse(A, 0, len(A) - 1)
     return A
 
 def quickSortRecurse(A, leftIdx, rightIdx):
-    """ quickSortRecurse - recursive quick sort algorithm
-    """
     if leftIdx < rightIdx:
         pivotIdx = doPartitioning(A, leftIdx, rightIdx, leftIdx)
         quickSortRecurse(A, leftIdx, pivotIdx - 1)
         quickSortRecurse(A, pivotIdx + 1, rightIdx)
 
 def doPartitioning(A, leftIdx, rightIdx, pivotIdx):
-    """ doPartitioning - partition the array around the pivot
-    """
     pivotVal = A[pivotIdx]
     A[pivotIdx], A[rightIdx] = A[rightIdx], A[pivotIdx]
     storeIdx = leftIdx
